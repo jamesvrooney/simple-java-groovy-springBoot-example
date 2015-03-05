@@ -25,7 +25,7 @@ public class Application {
     }
 }
 
-@Component
+/*@Component
 class BookingCommandLineRunner implements CommandLineRunner {
 
     @Autowired
@@ -38,7 +38,7 @@ class BookingCommandLineRunner implements CommandLineRunner {
             System.out.println(booking);
         }
     }
-}
+}*/
 
 /*@RestController
 class BookingRestController {
