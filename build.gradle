@@ -10,9 +10,7 @@ buildscript {
     }
 }
 
-//apply plugin: 'java'
 apply plugin: 'groovy'
-//apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot' 
 
@@ -20,29 +18,20 @@ jar {
     baseName = 'simple-java-groovy-springBoot-example'
     version = '0.0.1-SNAPSHOT'
 }
-//sourceCompatibility = 1.7
-//targetCompatibility = 1.7
 
 repositories {
     mavenCentral()
 }
-
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("org.springframework.boot:spring-boot-starter-data-mongodb")
     compile("org.springframework.boot:spring-boot-starter-hateoas")
     compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.codehaus.groovy:groovy-all:2.3.6")
 	runtime("com.h2database:h2")
     testCompile("org.springframework.boot:spring-boot-starter-test") 
 }
-
-/*eclipse {
-    classpath {
-         containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-         containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7'
-    }
-}*/
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
