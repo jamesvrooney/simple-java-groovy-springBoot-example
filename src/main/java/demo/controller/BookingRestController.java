@@ -1,5 +1,6 @@
 package demo.controller;
 
+import demo.service.BookingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,10 +17,10 @@ import demo.model.Booking;
 class BookingRestController {
 
     @Autowired
-    BookingRepository bookingRepository;
+    BookingService bookingService;
 
     @RequestMapping("/rooney")
     Collection<Booking> bookings() {
-        return this.bookingRepository.findAll();
+        return this.bookingService.getAllBookings();
     }
 }

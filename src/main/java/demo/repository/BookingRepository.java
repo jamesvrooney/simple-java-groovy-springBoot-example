@@ -1,10 +1,9 @@
 package demo.repository;
 
+import demo.model.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Collection;
-import demo.repository.BookingRepository;
-import demo.model.Booking;
 
 /**
  * Created by jamesvrooney on 05/03/15.
