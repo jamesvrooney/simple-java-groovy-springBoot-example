@@ -10,8 +10,9 @@ buildscript {
     }
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
+//apply plugin: 'java'
+apply plugin: 'groovy'
+//apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot' 
 
@@ -36,12 +37,12 @@ dependencies {
     testCompile("org.springframework.boot:spring-boot-starter-test") 
 }
 
-eclipse {
+/*eclipse {
     classpath {
          containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
          containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7'
     }
-}
+}*/
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
