@@ -4,3 +4,7 @@ build/
 *.iml
 *.ipr
 *.iws
+/bin/
+.classpath
+.settings/
+.project

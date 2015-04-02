@@ -12,7 +12,9 @@ buildscript {
 
 apply plugin: 'groovy'
 apply plugin: 'idea'
+apply plugin: 'eclipse'
 apply plugin: 'spring-boot' 
+apply plugin: 'war' 
 
 jar {
     baseName = 'simple-java-groovy-springBoot-example'
@@ -29,8 +31,9 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-hateoas")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("org.codehaus.groovy:groovy-all:2.3.6")
-	runtime("com.h2database:h2")
+    runtime("com.h2database:h2")
     testCompile("org.springframework.boot:spring-boot-starter-test") 
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 
 task wrapper(type: Wrapper) {
